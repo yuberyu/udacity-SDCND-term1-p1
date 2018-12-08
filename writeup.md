@@ -16,6 +16,13 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
+[image_notexture]: ./test_images_output/whiteCarLaneSwitch.jpgnotexture.jpg
+[image_gray]: ./test_images_output/whiteCarLaneSwitch.jpggray.jpg
+[image_blur]: ./test_images_output/whiteCarLaneSwitch.jpgblur.jpg
+[image_canny]: ./test_images_output/whiteCarLaneSwitch.jpgcanny.jpg
+[image_mask]: ./test_images_output/whiteCarLaneSwitch.jpgmask.jpg
+[image_hough]: ./test_images_output/whiteCarLaneSwitch.jpghough.jpg
+[image_result]: ./test_images_output/whiteCarLaneSwitch.jpgresult.jpg
 
 ---
 
@@ -29,19 +36,25 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
-![alt text][image1]
+![alt text][image_notexture]
+![alt text][image_gray]
+![alt text][image_blur]
+![alt text][image_canny]
+![alt text][image_mask]
+![alt text][image_hough]
+![alt text][image_result]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
+A potential shortcoming would be low contrast while the image becoming too bright or due to light-color lines.
+Another would be different surface of roads. Ther are roads that has cross lines or bright textures that would cause problems.
 
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+There are some possible improvements.
+1. Use another filter for better performance. Bilateral Filter is slow, so it would be a improvement if used better filters.
+2. Stablize line fitting results. The result of line fitting looks not perfect. A possible improvement would be looking for better parameters and determine better samples.
 
-Another potential improvement could be to ...
