@@ -35,27 +35,35 @@ My pipeline consisted of 7 steps.
 1. Bilateral Filterring
 Since I am looking for lane lines, it's best that remaining the contrast of edges while blurring.
 After diving in OpenCV, I found a filter that meet this requirement. I call this step "removing texture"
+
 ![alt text][image_notexture]
 
 2. Conver blurred image to gray scale.
+
 ![alt text][image_gray]
 
 3. Gaussian Blur
+
 ![alt text][image_blur]
 
 4. Find Canny edge
+
 ![alt text][image_canny]
 
 5. Apply mask
+
 ![alt text][image_mask]
 
 6. Find hough lines
 In this step, I modified the draw_lines() function by fitting a line with line tips in order to draw a single solid line per lane.
+
 ![alt text][image_hough]
+
 a. red lines are hough lines
 b. green lines are best fitting lines.
 
 7. Finally, draw solid lines on original image.
+
 ![alt text][image_result]
 
 
